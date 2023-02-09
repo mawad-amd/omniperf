@@ -471,10 +471,3 @@ def parse(my_parser):
     analyze_group.add_argument(
         "--dependency", action="store_true", help="\t\tList the installation dependency."
     )
-    analyze_group.add_argument(
-        "--gui",
-        type=int,
-        nargs="?",
-        const=8050,
-        help="\t\tActivate a GUI to interate with Omniperf metrics.\n\t\tOptionally, specify port to launch application (DEFAULT: 8050)",
-    )

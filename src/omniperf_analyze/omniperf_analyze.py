@@ -275,7 +275,4 @@ def analyze(args):
             runs[d[0]].filter_dispatch_ids = gd
 
     # Launch CLI analysis or GUI
-    if args.gui:
-        run_gui(args, runs)
-    else:
-        run_cli(args, runs)
+    run_cli(args, runs)
