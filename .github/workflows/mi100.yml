@@ -3,7 +3,7 @@ name: mi100
 on:
   push:
     branches:
-      - '2.x'
+      - 'testupdates'
 
   # Allows manual execution
   workflow_dispatch:            
