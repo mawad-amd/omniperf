@@ -392,7 +392,7 @@ def run_rocscope(args, fname):
 def mibench(args, mspec):
     """Run roofline microbenchmark to generate peek BW and FLOP measurements."""
     logging.info("[roofline] No roofline data found. Generating...")
-    distro_map = {"platform:el8": "rhel8", "15.3": "sle15sp3", "20.04": "ubuntu20_04"}
+    distro_map = {"platform:el8": "rhel8", "15.3": "sle15sp3", "20.04": "ubuntu20_04", "22.04": "ubuntu22_04"}
 
     target_binary = detect_roofline(mspec)
     if target_binary["rocm_ver"] == "override":
