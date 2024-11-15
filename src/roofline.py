@@ -341,6 +341,12 @@ class Roofline:
                     ),
                 )
             )
+            print(self.__ai_data)
+            dev_id = str(self.__run_parameters["device_id"])
+            csv_file = self.__run_parameters["workload_dir"] + "/empirRoof_gpu-{}_fp.csv".format(dev_id)
+            with open(csv_file, mode='a', newline='') as file:
+                for item in ['ai_l1', 'ai_l2', 'ai_hbm']:
+                    file.write(f"{item},{dtype},{self.__ai_data[item][0][0]},{self.__ai_data[item][1][0]}\n")
 
         # Set layout
         fig.update_layout(
